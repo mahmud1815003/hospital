@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-cyan-400 max-w-screen-lg p-0 mr-0">
+    <div class="w-screen">
+        <nav class="p-5 bg-white shadow md:flex md:items-center md:justify-between">
+          <div class="flex justify-between items-center ">
+            <span class="text-3xl font-sans font-bold cursor-pointer">
+              <img class="h-10 inline"
+                src="../public/undraw_medicine_b1ol.png">
+                Shandhani Hospitals
+            </span>
+      
+            <span class="text-3xl cursor-pointer mx-2 md:hidden block ">
+              <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+            </span>
+          </div>
+      
+          <ul
+            class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+            <li class="mx-4 my-6 md:my-0">
+              <a href="/" class="text-xl font-sans font-bold hover:text-cyan-500 duration-500">HOME</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+              <a href="#" class="text-xl font-sans font-bold hover:text-cyan-500 duration-500">CONTACT</a>
+            </li>
+            <button class="bg-cyan-500 text-white font-sans font-bold duration-500 px-6 py-2 mx-4 hover:bg-red-500 rounded-full ">
+              <a href="/admin">Admin</a>
+            </button>        
+            <button class="bg-cyan-500 text-white font-sans font-bold duration-500 px-6 py-2 mx-4 hover:bg-red-500 rounded-full ">
+              <a href="/doctor">Doctor</a>
+            </button>
+            <button class="bg-cyan-500 text-white font-sans font-bold duration-500 px-6 py-2 mx-4 hover:bg-red-500 rounded-full ">
+              <a href="/patient">Patient</a>
+            </button>
+            <h2 class=""></h2>
+          </ul>
+          <script>
+            function Menu(e) {
+              let list = document.querySelector('ul');
+              e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
+            }
+          </script>
+        </nav>
+      </div>
+    <img src="../public/wave.png" class="fixed hidden lg:block inset-0 h-full" style="z-index: -1;" />
+    <div class="w-screen h-screen flex flex-row justify-center items-center">
+            <img src="../public/undraw_safe_re_kiil.svg" class="w-0.75 h-0.75 hover:scale-120 transition-all duration-500 transform" />
+
+        <section class="w-1/2 text-gray-600 body-font">
+            <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
+                <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+                    <h2 class="text-center text-red-600 text-lg font-bold title-font mb-5">Patient Log In</h2>
+                    <div class="relative mb-4">
+                        <label for="full-name" class="leading-7 text-sm text-gray-600">Email</label>
+                        <input type="email" id="full-name" name="full-name"
+                            class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="password" class="leading-7 text-sm text-gray-600">Password</label>
+                        <input type="password" id="email" name="password"
+                            class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <button
+                        class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Sign In</button>
+                    <p class="text-xs text-gray-500 m-3">
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+
+
+    <footer class="text-gray-600 body-font w-screen">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+
+                <span class="ml-3 text-xl">Shandhani Hospitals Limited</span>
+            </a>
+            <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">©
+                2022 Shandhani Hospitals Limited —
+                <a href="https://www.kuet.ac.bd/department/BME/" class="text-gray-600 ml-1" rel="noopener noreferrer"
+                    target="_blank">@KUET BME</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <a class="text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="w-5 h-5" viewBox="0 0 24 24">
+                        <path
+                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                        </path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path stroke="none"
+                            d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                        </path>
+                        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                </a>
+            </span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
